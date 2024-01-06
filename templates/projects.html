@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block title %}Projects{% endblock %}
+
+
+{% block content %}
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Projects</h1>
+        <p class="col-md fs-4">Various projects I have completed and worked on will be added to this page.</p>
+      </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/project.png') }}" class="card-img-top" alt="Project 1 Image">
+        <div class="card-body">
+          <h5 class="card-title">Project 1</h5>
+          <p class="card-text">Project 1 description will come here later.</p>
+          <a href="{{ url_for('projects') }}" class="btn btn-primary">See Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/project.png') }}" class="card-img-top" alt="Project 2 Image">
+        <div class="card-body">
+          <h5 class="card-title">Project 2</h5>
+          <p class="card-text">Project 2 description will come here later.</p>
+          <a href="{{ url_for('projects') }}" class="btn btn-primary">See Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/project.png') }}" class="card-img-top" alt="Project 3 Image">
+        <div class="card-body">
+          <h5 class="card-title">Project 3</h5>
+          <p class="card-text">Project 3 description will come here later.</p>
+          <a href="{{ url_for('projects') }}" class="btn btn-primary">See Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/project.png') }}" class="card-img-top" alt="Project 4 Image">
+        <div class="card-body">
+          <h5 class="card-title">Project 4</h5>
+          <p class="card-text">Project 4 description will come here later.</p>
+          <a href="{{ url_for('projects') }}" class="btn btn-primary">See Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
