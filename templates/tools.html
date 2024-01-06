@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}Tools{% endblock %}
+
+{% block content %}
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid">
+        <h1 class="display-5 fw-bold">Tools</h1>
+        <p class="col-md fs-4">Various useful generating and calculation tools are listed on this page.</p>
+        </div>
+    </div>
+    <ul>
+        <li><a href="{{ url_for('password_generator') }}">Password Generator</a></li>
+    </ul>
+{% endblock %}
