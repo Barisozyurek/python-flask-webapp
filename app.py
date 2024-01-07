@@ -48,6 +48,23 @@ def generate_random_password(length=12, use_lowercase=True, use_uppercase=True, 
     password = ''.join(random.choice(characters) for _ in range(length))
     return password
 
+# Word Counter Page
+@app.route('/word-counter', methods=['GET', 'POST'])
+def word_counter():
+    results = None
+
+    if request.method == 'POST':
+        input_text = request.form.get('inputText', '')
+        results = calculate_counts(input_text)
+
+    return render_template('word-counter.html', results=results)
+
+def calculate_counts(text):
+    words = text.lower().split()
+    word_count = len(words)
+    char_count = len(text)
+    return {'word_count': word_count, 'char_count': char_count}
+
 # Twitter redirect
 @app.route('/twitter')
 def twitter():
